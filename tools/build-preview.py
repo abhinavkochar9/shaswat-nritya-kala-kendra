@@ -12,7 +12,7 @@ src = Path(__file__).resolve().parent.parent / "index.html"
 html = src.read_text()
 html = re.sub(r"<!doctype html>\s*", "", html, flags=re.I)
 html = re.sub(r"</?html[^>]*>\s*|</?head>\s*|</?body>\s*", "", html)
-html = re.sub(r"<title>.*?</title>", "<title>Shaswat Nritya Kala Kendra</title>", html, count=1, flags=re.S)
+html = re.sub(r"<title>.*?</title>", "<title>Shashwat Nritya Kala Kendra</title>", html, count=1, flags=re.S)
 Path(sys.argv[1]).parent.mkdir(parents=True, exist_ok=True)
 Path(sys.argv[1]).write_text(html)
 print(f"wrote {sys.argv[1]} ({len(html) // 1024} KB)")

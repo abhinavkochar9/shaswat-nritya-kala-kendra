@@ -1,8 +1,8 @@
-# Shaswat Nritya Kala Kendra — website
+# Shashwat Nritya Kala Kendra — website
 
 Live draft: https://abhinavkochar9.github.io/shaswat-nritya-kala-kendra/
 
-One-page static site for Shaswat Nritya Kala Kendra and Snigdha Tripathi. Plain HTML, CSS and JavaScript —
+One-page static site for Shashwat Nritya Kala Kendra, the Kathak academy founded by Snigdha Tripathi. Plain HTML, CSS and JavaScript —
 no build step. Open `index.html` through any static server, e.g.
 
 ```bash
@@ -11,11 +11,12 @@ python3 -m http.server 8791
 
 ## Files
 
-- `index.html` — all content. Every spot that still needs real information has an `<!-- EDIT -->`
-  comment or a `[bracketed placeholder]`.
+- `index.html` — all content. The text comes from the Kendra's own write-up, kept in its words;
+  spots that still need information have an `<!-- EDIT -->` comment.
 - `css/styles.css` — palette and fonts are the variables at the top of the file.
 - `js/main.js` — `SITE.email` (used by the enquiry form), hero video controls, gallery viewer.
-- `assets/images/` — web-sized photos (EXIF/GPS stripped) and transparent cut-outs (`cutout-*.webp`).
+- `assets/images/` — web-sized photos (EXIF/GPS stripped), transparent cut-outs (`cutout-*.webp`) and the
+  round logo badge (`logo.webp`, `logo-160.webp`). `assets/favicon.png` and `apple-touch-icon.png` come from the same logo.
 - `assets/video/hero-loop.mp4` — the silent background loop in the hero: her performance clip at
   half speed, with the curtain and banner replaced by a hazy theatre backdrop (she and the real stage floor are
   kept). How it was made: `tools/hero-video/README.md`.
@@ -23,10 +24,9 @@ python3 -m http.server 8791
 
 ## Still to fill in
 
-The page only states what has been confirmed: her name, the institution's name, that she dances and
-teaches dance, her students, and her phone and email. Anything else waits for her own words:
+The page only states what the Kendra has written about itself, plus the phone and email. Anything new
+waits for her own words:
 
-- A short bio and anything she wants said about her dance and teaching.
 - More photos and videos; higher-resolution originals of the student group photo and the certificate
   photo (the current ones are WhatsApp-compressed).
 - YouTube / Instagram links if she wants them shown.

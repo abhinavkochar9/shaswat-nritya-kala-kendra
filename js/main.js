@@ -87,10 +87,9 @@ if ("IntersectionObserver" in window) {
 }
 
 // ---------- Active nav link ----------
+// Every section is watched, so the highlight clears over sections that have no nav link.
 const navLinks = [...document.querySelectorAll('.nav__links a[href^="#"]')];
-const navSections = navLinks
-  .map((a) => document.querySelector(a.getAttribute("href")))
-  .filter(Boolean);
+const navSections = document.querySelectorAll("main section[id]");
 
 if ("IntersectionObserver" in window) {
   const navIO = new IntersectionObserver((entries) => {

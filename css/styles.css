@@ -1,5 +1,5 @@
 /* ==========================================================
-   Snigdha Tripathi — site styles
+   Shashwat Nritya Kala Kendra — site styles
    Palette: sindoor red, saffron orange and oxblood on warm white
    ========================================================== */
 
@@ -239,11 +239,12 @@ h1, h2, h3 {
   text-decoration: none;
   line-height: 1;
 }
-.brand__mark {
-  width: 34px;
-  height: 34px;
-  color: var(--accent-text);
+.brand__logo {
+  width: 46px;
+  height: 46px;
   flex: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px -4px rgba(26, 4, 3, .45);
 }
 .brand__name {
   display: block;
@@ -262,8 +263,7 @@ h1, h2, h3 {
   color: var(--muted);
 }
 .brand--light .brand__name { color: var(--cream); }
-.brand--light .brand__name em,
-.brand--light .brand__mark { color: var(--orange-soft); }
+.brand--light .brand__name em { color: var(--orange-soft); }
 .brand--light .brand__tag { color: rgba(255, 244, 236, .55); }
 
 .nav__menu {
@@ -374,8 +374,21 @@ h1, h2, h3 {
 }
 .hero__lede {
   max-width: 32em;
-  margin: 26px 0 36px;
-  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  margin: 24px 0 0;
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 1.9vw, 1.55rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #FFF8F2;
+}
+.hero__meta {
+  margin: 16px 0 36px;
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--orange-soft);
 }
 .hero__actions {
   display: flex;
@@ -407,8 +420,7 @@ h1, h2, h3 {
 
 /* Header sits on the dark hero until the page scrolls. */
 .site-header:not(.is-scrolled) .brand__name { color: #FFF8F2; }
-.site-header:not(.is-scrolled) .brand__name em,
-.site-header:not(.is-scrolled) .brand__mark { color: var(--orange-soft); }
+.site-header:not(.is-scrolled) .brand__name em { color: var(--orange-soft); }
 .site-header:not(.is-scrolled) .brand__tag { color: rgba(255, 244, 236, .62); }
 .site-header:not(.is-scrolled) .nav__toggle { border-color: rgba(255, 244, 236, .3); }
 .site-header:not(.is-scrolled) .nav__toggle span { background: #FFF8F2; }
@@ -669,6 +681,119 @@ h1, h2, h3 {
   color: var(--ink);
 }
 
+/* ---------- About the Kendra ---------- */
+.kendra__grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: clamp(56px, 8vw, 120px);
+  align-items: center;
+}
+.kendra__logo {
+  position: relative;
+  width: min(100%, 440px);
+  justify-self: center;
+}
+.kendra__logo img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 50px 80px -48px rgba(75, 15, 12, .7);
+}
+.kendra__mandala {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 128%;
+  height: auto;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  color: rgba(194, 65, 12, .26);
+  pointer-events: none;
+}
+
+/* ---------- Founder ---------- */
+.section--sand .about__small { border-color: var(--sand); }
+.about__role {
+  margin: -12px 0 28px;
+  font-size: .76rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.about__copy strong,
+.perform__copy strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+@media (min-width: 961px) {
+  .founder .about__grid { align-items: start; }
+  .founder .about__media {
+    position: sticky;
+    top: calc(var(--header-h) + 36px);
+  }
+}
+
+/* ---------- Philosophy ---------- */
+.philosophy__inner {
+  max-width: 900px;
+  text-align: center;
+}
+.philosophy .label { justify-content: center; }
+.philosophy .lead {
+  max-width: 34em;
+  margin-inline: auto;
+}
+.philosophy__cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 56px;
+  margin-top: 44px;
+  text-align: left;
+  color: var(--muted);
+}
+.philosophy__cols p { margin: 0; }
+.philosophy__mark {
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin: 52px auto 22px;
+  color: var(--orange);
+}
+.philosophy__close {
+  max-width: 30em;
+  margin-inline: auto;
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 2.2vw, 1.65rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.45;
+  color: var(--accent-text);
+}
+
+/* ---------- Mission ---------- */
+.mission__inner {
+  max-width: 820px;
+  text-align: center;
+}
+.mission .label { justify-content: center; }
+.mission__text {
+  margin-bottom: 28px;
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+  font-weight: 300;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.mission__close {
+  margin-top: 36px;
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  font-style: italic;
+  color: var(--accent-text);
+}
+
 /* ---------- 02 Journey ---------- */
 .journey__grid {
   display: grid;
@@ -742,6 +867,37 @@ h1, h2, h3 {
   font-size: .82rem;
   color: rgba(255, 244, 236, .6);
 }
+
+.classes__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px clamp(48px, 7vw, 110px);
+}
+.classes__copy p:first-child {
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 1.7vw, 1.4rem);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--cream);
+}
+.section--ink .h3 em { color: var(--orange-soft); }
+.learn .offer-list { margin: 22px 0 24px; }
+.offer-list--single { grid-template-columns: 1fr; }
+.learn__note {
+  font-size: .95rem;
+  color: rgba(255, 244, 236, .6);
+}
+.exams {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 20px 64px;
+  margin-top: clamp(56px, 7vw, 96px);
+  padding: clamp(28px, 4vw, 48px);
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  background: rgba(255, 244, 236, .03);
+}
+.exams .h3 { margin: 0; }
 
 .classes__note {
   margin: 36px 0 0;
@@ -1230,6 +1386,9 @@ h1, h2, h3 {
   .menu-open .brand__tag { color: rgba(255, 244, 236, .55); }
 
   .about__grid,
+  .kendra__grid,
+  .classes__grid,
+  .exams,
   .journey__grid,
   .perform__grid,
   .contact__grid,
@@ -1258,6 +1417,7 @@ h1, h2, h3 {
   .hero__pause { top: calc(min(66svh, 640px) - 58px); bottom: auto; }
 
   .about__media { max-width: 480px; }
+  .kendra__logo { width: min(78%, 360px); margin-top: 24px; }
   .journey__intro { position: static; }
   .yt--featured { aspect-ratio: 16/9; }
   .video-grid__side { grid-template-columns: 1fr 1fr; }
@@ -1268,7 +1428,7 @@ h1, h2, h3 {
 @media (max-width: 640px) {
   body { font-size: 16px; }
 
-  .brand__mark { width: 30px; height: 30px; }
+  .brand__logo { width: 40px; height: 40px; }
   .brand__name { font-size: 1.2rem; }
   .hero__actions .btn { flex: 1 1 auto; }
 
@@ -1276,6 +1436,7 @@ h1, h2, h3 {
   .stamp__mark { width: 30px; height: 30px; }
 
   .facts { grid-template-columns: 1fr; }
+  .philosophy__cols { grid-template-columns: 1fr; }
 
   .timeline li { grid-template-columns: 1fr; gap: 6px; }
 
