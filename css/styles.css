@@ -601,9 +601,10 @@ h1, h2, h3 {
   gap: clamp(48px, 7vw, 110px);
   align-items: center;
 }
+/* The right padding leaves room for the stamp to hang over the arch. */
 .about__media {
   position: relative;
-  padding: 0 14% 16% 0;
+  padding: 0 14% 0 0;
 }
 .about__main { --ar: 3/4; }
 .about__small {
@@ -688,27 +689,30 @@ h1, h2, h3 {
   gap: clamp(56px, 8vw, 120px);
   align-items: center;
 }
+/* The ring sets the size; the logo is a fixed share of it (r 62 of 100 in #halo),
+   so the petals frame it the same way at every screen width. */
 .kendra__logo {
   position: relative;
-  width: min(100%, 440px);
+  width: min(100%, 500px);
+  aspect-ratio: 1;
   justify-self: center;
 }
 .kendra__logo img {
-  position: relative;
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  box-shadow: 0 50px 80px -48px rgba(75, 15, 12, .7);
-}
-.kendra__mandala {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 128%;
+  width: 62%;
   height: auto;
-  aspect-ratio: 1;
   translate: -50% -50%;
-  color: rgba(194, 65, 12, .26);
+  border-radius: 50%;
+  box-shadow: 0 34px 56px -34px rgba(75, 15, 12, .7);
+}
+.kendra__mandala {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: rgba(194, 65, 12, .3);
   pointer-events: none;
 }
 
@@ -882,7 +886,7 @@ h1, h2, h3 {
 }
 .section--ink .h3 em { color: var(--orange-soft); }
 .learn .offer-list { margin: 22px 0 24px; }
-.offer-list--single { grid-template-columns: 1fr; }
+.offer-list.offer-list--single { grid-template-columns: 1fr; }
 .learn__note {
   font-size: .95rem;
   color: rgba(255, 244, 236, .6);
@@ -1417,7 +1421,7 @@ h1, h2, h3 {
   .hero__pause { top: calc(min(66svh, 640px) - 58px); bottom: auto; }
 
   .about__media { max-width: 480px; }
-  .kendra__logo { width: min(78%, 360px); margin-top: 24px; }
+  .kendra__logo { width: min(100%, 420px); }
   .journey__intro { position: static; }
   .yt--featured { aspect-ratio: 16/9; }
   .video-grid__side { grid-template-columns: 1fr 1fr; }
